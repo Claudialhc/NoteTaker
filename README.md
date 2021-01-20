@@ -9,8 +9,8 @@ app.get('/api/notes', (req, res) => {
   res.sendFile(path.join(__dirname, "/db/db.json"));
 });
 ```
-
-![Screenshot](assets/note-img.png)
+When you first open the app it will look like the image below:
+![Screenshot](Note-Taker-app.png)
 
 GitHub Repo:https://github.com/Claudialhc/NoteTaker
 
