@@ -10,7 +10,7 @@ app.get('/api/notes', (req, res) => {
 });
 ```
 
-![screenshot](assets/Note-Taker-app.png)
+![Screenshot](assets/note-img.png)
 
 GitHub Repo:https://github.com/Claudialhc/NoteTaker
 
