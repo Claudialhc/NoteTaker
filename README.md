@@ -10,7 +10,8 @@ app.get('/api/notes', (req, res) => {
 });
 ```
 
-![NoteTakerIMG](/assets/Note-Taker-app.png)
+![screenshot](./assets/Note-Taker-app.png)
 
-[GitHub Repo](https://github.com/Claudialhc/NoteTaker)
+GitHub Repo:https://github.com/Claudialhc/NoteTaker
+
 Heroku Deployed URL: 
