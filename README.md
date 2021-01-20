@@ -14,4 +14,4 @@ When you first open the app it will look like the image below:
 
 GitHub Repo:https://github.com/Claudialhc/NoteTaker
 
-Heroku Deployed URL: 
+Heroku Deployed URL: https://fast-gorge-80781.herokuapp.com/
