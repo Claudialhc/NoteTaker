@@ -1,0 +1,31 @@
+
+Office hours notes DELETE THIS BEFORE PUSHING!!
+
+x// get dependencies
+const path = require("path");
+const fs = require("fs");
+const newNote = {
+  id: "bbb",
+  title: "note 2",
+  text: "this is a note",
+};
+// read the notes file to get data
+fs.readFile(path.join(__dirname, "notes.json"), "utf8", (err, data) => {
+  // parse the data from json to an array to create notes
+  const notes = JSON.parse(data);
+  // add the new note to the notes array
+  notes.push(newNote);
+  // convert notes back into a json string
+  // save to notes.json
+  fs.writeFile(
+    path.join(__dirname, "notes.json"),
+    JSON.stringify(notes),
+    (err) => {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log("Success!");
+      }
+    }
+  );
+});
