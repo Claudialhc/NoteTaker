@@ -66,6 +66,22 @@ app.post("/api/notes", function(req, res) {
 //and then rewrite the notes to the db.json file.
 // you'll also need to fs.readFile and writeFile in that order here
 
+app.delete("/api/notes/:id", function(req, res) {
+  let savedNotes = JSON.parse(fs.readFileSync("./db/db.json", "utf8"));
+  let noteID = req.params.id;
+  let newID = 0;
+  console.log(`Deleting note with ID ${noteID}`);
+  savedNotes = savedNotes.filter(currNote => {
+      return currNote.id != noteID;
+  })
+  for (currNote of savedNotes) {
+      currNote.id = newID.toString();
+      newID++;
+  }
+  fs.writeFileSync("./db/db.json", JSON.stringify(savedNotes));
+  res.json(savedNotes);
+})
+
 
 app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "./public/index.html"));
